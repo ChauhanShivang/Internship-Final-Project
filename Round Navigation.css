@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    text-decoration: none;
+}
+
+.navbar-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar{
+    background-color: rgb(33, 36, 62);
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity .5s;
+}
+.change.navbar{
+    opacity: 1;
+}
+
+.navbar-link{
+    position: absolute;
+    color: #fff;
+    opacity: 1;
+}
+
+.navbar-link:nth-child(1){
+    top: 25rem;
+    left: 74rem;
+}
+.navbar-link:nth-child(2){
+    top: 35rem;
+    left: 84rem;
+}
+.navbar-link:nth-child(3){
+    top: 35rem;
+    left: 64rem;
+}
+.navbar-link:nth-child(4){
+    top: 45rem;
+    left: 74rem;
+}
+
+.navbar-link i{
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.navbar-btn{
+    position: absolute;
+    cursor: pointer;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: rgb(33, 36, 62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color .5s;
+}
+.change.navbar-btn{
+    background-color: #fff;
+}
+
+.navbar-btn i{
+    font-size: 4rem;
+    color: #fff;
+    transition: transform .5s;
+}
+.change.navbar-btn i{
+    color: rgb(33, 36, 62);
+    transform: rotate(45deg);
+}

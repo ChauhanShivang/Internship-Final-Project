@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: sans-serif;
+    list-style-type: none;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#f9a423, #fff);
+}
+
+.banner{
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    animation: animaToUp .5s;
+}
+
+.banner h1{
+    font-size: 4rem;
+    animation: moveToDown .5s;
+}
+
+.banner span{
+    color: #f9a423;
+    text-shadow: 
+                2px 2px 0 #000,  
+               -2px 2px 0 #000,  
+                2px -2px 0 #000,  
+               -2px -2px 0 #000,  
+                2px 0 0 #000,     
+               -2px 0 0 #000,     
+                0 2px 0 #000,     
+                0 -2px 0 #000;
+    animation: moveToUp .5s;
+}
+
+.hamburger-menu{
+    width: 3rem;
+    height: 2.5rem;
+    background-color: transparent;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+}
+
+.line{
+    width: 3rem;
+    height: .5rem;
+    background-color: #000;
+    margin: .2rem 0;
+    border-radius: 1rem;
+    /* transform-origin: left; */
+    transition: all .5s;
+    z-index: 100;
+}
+
+.change .line-1{
+    transform: rotate(45deg) translateX(1rem) translateY(.2rem);
+    background-color: #000;
+}
+.change .line-2{
+    opacity: 0;
+}
+.change .line-3{
+    transform: rotate(-45deg) translateX(1rem) translateY(-.2rem);
+    background-color: #000;
+}
+
+.navbar{
+    background-color: #fff;
+    border: solid black;
+    width: 15rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 2rem 2rem 0;
+    font-size: 2rem;
+    position: fixed;
+    left: -20rem;
+    z-index: 50;
+    transition: left .5s;
+}
+
+.change{
+    left: 0;
+}
+
+.nav-link{
+    color: #000;
+    font-weight: 800;
+}
+
+.nav-item{
+    margin: 2rem;
+}
+
+.nav-item:hover{
+    /* color: #fff; */
+    transform: scale(1.2);
+}
+
+@keyframes moveToUp{
+    0%{
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveToDown{
+    0%{
+        transform: translateY(-10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

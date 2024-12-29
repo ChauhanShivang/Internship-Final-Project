@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.home-btn{
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
+    padding: 4rem 4rem;
+    text-decoration: none;
+    font-size: 2rem;
+    z-index: 100;
+}
+
+.home-btn a{
+    color: #000;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#f9a423, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    font-size: 4rem;
+    font-family: sans-serif;
+    animation: moveToUp 1s;
+    color: #000;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 
+                2px 2px 0 #000,  
+               -2px 2px 0 #000,  
+                2px -2px 0 #000,  
+               -2px -2px 0 #000,  
+                2px 0 0 #000,     
+               -2px 0 0 #000,     
+                0 2px 0 #000,     
+                0 -2px 0 #000;
+    text-shadow: 0 8px 8px #000;
+    transform: rotateX(70deg) rotateZ(-30deg);   
+    transform-style: preserve-3d;
+    transition: all .5s;
+}
+
+.btn::before{
+    content: "";
+    width: 100%;
+    height: 15px;
+    background-color: #f9a423;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+.btn::after{
+    content: "";
+    height: 100%;
+    width: 15px;
+    background-color: #f9a423;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateY(90deg);
+    transform-origin: left;
+}
+
+.btn:hover{
+    transform: rotateX(0) rotateZ(0); 
+}
+
+.btn span{
+    color: #f9a423;
+    text-shadow: 
+                2px 2px 0 #000,  
+               -2px 2px 0 #000,  
+                2px -2px 0 #000,  
+               -2px -2px 0 #000,  
+                2px 0 0 #000,     
+               -2px 0 0 #000,     
+                0 2px 0 #000,     
+                0 -2px 0 #000;
+    text-shadow: 0 8px 8px #000;
+}

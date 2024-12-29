@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background: url(bg.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.banner{
+    width: 100%;
+    position: absolute;
+    top: 44%;
+    z-index: 1;
+}
+
+.banner-text{
+    text-align: center;
+    font-size: 8rem;
+    color: #000;
+}
+
+.nav-list{
+    display: flex;
+    justify-content: center;
+}
+
+.nav-item{
+    margin-top: 3rem;
+    text-align: center;
+    width: 60vh;
+    pointer-events: none;
+}
+
+.nav-link{
+    font-size: 3rem;
+    color: #000;
+    font-weight: 700;
+    pointer-events: all;
+}
+
+.dropdown{
+    margin-top: 1rem;
+    background-color: #fff;
+    border-radius: 10%;
+    position: relative;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: all .5s;
+    pointer-events: all;
+}
+
+.nav-item:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+}
+
+.dropdown-item{
+    text-align: left;
+    padding: 2rem;
+}
+
+.dropdown-link{
+    color: #121a3f;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.dropdown p{
+    font-size: 1rem;
+}

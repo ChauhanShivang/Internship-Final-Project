@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.home-btn{
+    position: absolute;
+    padding: 4rem 40rem;
+    text-decoration: none;
+    font-size: 2rem;
+    z-index: 100;
+}
+
+.home-btn a{
+    color: #000;
+}
+
+.slideshow-wrapper{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000;
+}
+
+.slide img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.arrows-visibility{
+    opacity: 0;
+}
+
+.control{
+    position: absolute;
+    top: 0;
+    width: 15vw;
+    height: 100%;
+    background-color: grey;
+    opacity: 0;
+    z-index: 100;
+    cursor: pointer;
+    transition: opacity .5s linear;
+}
+
+.control:hover{
+    opacity: 1;
+}
+
+.left-arrow{
+    left: 0;
+}
+
+.right-arrow{
+    right: 0;
+}
+
+.line{
+    width: .3rem;
+    height: 10rem;
+    background-color: #000;
+    position: absolute;
+}
+
+.line-1{
+    top: 13rem;
+    left: 5rem;
+    transform: rotate(30deg);
+}
+.line-2{
+    top: 21.2rem;
+    left: 5rem;
+    transform: rotate(-30deg);
+}
+
+.line-3{
+    top: 13rem;
+    right: 5rem;
+    transform: rotate(-30deg);
+}
+.line-4{
+    top: 21.2rem;
+    right: 5rem;
+    transform: rotate(30deg);
+}
+
+.play-pause{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    cursor: pointer;
+}
+
+.play-pause i{
+    color: #fff;
+    font-size: 3rem;
+}

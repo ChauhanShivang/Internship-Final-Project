@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="3D Form.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="home-btn">
+            <a href="Main_Page.html">Home</a>
+            <a href="admin pass.html" style="margin-left: 5rem;">Admin Pannel</a>
+        </div>
+
+
+        <div class="forms-wrapper">
+            <form action="SignIn.php" method="post" class="signin-form" onsubmit="return Validate2()">
+                <a href="#" class="signup-btn">Sign Up</a>
+                <h2>Sign In</h2>
+                <div class="input-wrapper">
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                    <p id="ename2" style="color: red;"></p>
+                    <input type="text" id="email" name="email" placeholder="Your Email">
+                    <p id="eemail2" style="color: red;"></p>
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="submit" value="Sign In">
+                </div>
+            </form>
+            <form action="SignUp.php" method="post" class="signup-form" id="myform" onsubmit="return Validate1()">
+                <a href="#" class="signin-btn">Sign In</a>
+                <h2>Sign Up</h2>
+                <div class="input-wrapper">
+                    <input type="text" id="Name" name="Name" placeholder="Your Name">
+                    <p id="name" style="color: red;"></p>
+                    <input type="text" id="Email" name="Email" placeholder="Your Email">
+                    <p id="email" style="color: red;"></p>
+                    <input type="text" id="Mobile" name="Mobile" placeholder="Mobile No.">
+                    <p id="mobile" style="color: red;"></p>
+                    <input type="text" id="Pin" name="Pin" placeholder="Pin Code">
+                    <p id="pin" style="color: red;"></p>
+                    <input type="Password" id="Password" name="Password" placeholder="Password">
+                    <input type="submit" value="Sign Up">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="3D.js"></script>
+
+</body>
+</html>

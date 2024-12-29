@@ -1,0 +1,21 @@
+HTML
+HTML is a languagein which most of the websites are written. It is used to creat pages and make them functional
+
+CSS
+CSS Describes how HTML Elements are to be displayed on the screen, paper, or in other media
+
+JavaScript
+JavaScript is an open source & most popular client side scripting language supported by allbrowsers
+
+React
+React is declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose
+complex UIs from small and isolated pieces of code called "Components", 
+
+Node
+Node.js is an open source server environment
+
+Express
+Express is an minimal and flexible node.js web application framework that provides a roubst set of features for web and mobile applications.
+
+MongoDB
+MongoDB is a document database designed for ease of development and scaling 

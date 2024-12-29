@@ -1,0 +1,705 @@
+/* Main Page */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.container{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(214, 196, 196, 0.7)), url(bg.jpg) center no-repeat;
+}
+
+.header-2{
+    width: 100%;
+    height: 13rem;
+    z-index: 0;
+    position: absolute;
+    background-color: #6262b5;
+}
+
+:root{    /* For Common Styling */
+    --main-bg-color: #2e2e2e;
+    --primary-color: #524d4d;
+    --secondary-color: #777171;
+    --hover-text-color: #bdb8b8;
+    --active-icon-color: #2ae7e7;
+}
+
+.sidebar{
+    width: 15vw;
+    height: 100vh;
+    background-color: var(--main-bg-color);
+    position: fixed;
+    left: -16.5vw;
+    padding: 2rem 1rem;
+    z-index: 100;
+    transition: all .5s;
+    /* box-sizing: border-box;  */
+}
+
+.change .sidebar{
+    left: 0;
+    transition: all .5s;
+}
+
+.hamburger-menu{
+    width: 5.5rem;
+    height: 5.5rem;
+    background-color: black;
+    position: absolute;
+    top: 3rem;
+    left: 27rem;
+    right: -3.5rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+}
+
+.line{
+    width: 3rem;
+    height: .5rem;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 1rem;
+    transform-origin: left;
+    transition: all .2s;
+}
+
+.line-1{
+    top: 1rem;
+    left: 1.3rem;
+}
+.line-2{
+    top: 2.25rem;
+    left: 1.3rem;
+}
+.line-3{
+    top: 3.5rem;
+    left: 1.3rem;
+}
+
+.change .line-1{
+    top: 1rem;
+    left: -.7rem;
+    transform: rotate(-45deg) translateY(3.3rem);
+}
+.change .line-2{
+    opacity: 0;
+}
+.change .line-3{
+    top: 3.5rem;
+    left: -.7rem;
+    transform: rotate(45deg) translateY(-3.3rem);
+}
+
+.card{
+    display: flex;
+}
+
+.admin-img{
+    width: 5rem;
+    border-radius: 10%;
+}
+
+.card-body{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.card-title{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: var(--hover-text-color);
+    letter-spacing: .1rem;
+}
+
+.card-subtitle{
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.search-form{
+    margin: 2rem 0 4rem 0; 
+    display: flex;
+    align-items: center;
+}
+
+.search-input{
+    width: 100%;
+    height: 4rem;
+    background-color: var(--primary-color);
+    border-radius: .5rem;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    color: var(--hover-text-color);
+}
+
+.search-btn{
+    background-color: transparent;
+    border: none;
+    transform: translate(20rem);
+    color: #fff;
+}
+
+.nav-link{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: var(--hover-text-color);
+    margin-bottom: 3rem;
+}
+
+.nav-link-test{
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    flex-grow: 1;
+}
+
+.nav-link i:first-child{
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .2rem;
+    border-radius: .3rem;
+    transition: color .2s;
+}
+
+.nav-link:hover i:first-child{
+    color: var(--active-icon-color);
+}
+
+.nav-link i:last-child{
+    margin-right: 2.5rem;
+    font-size: 1.6rem;
+}
+
+.sub-nav-list{
+    width: 90%;
+    margin-left: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+}
+
+.change.sub-nav-list{
+    max-height: 10rem;
+}
+
+.sub-nav-item{
+    margin: .5rem 0;
+}
+
+.sub-nav-link{
+    font-size: 1.5rem;
+    color: var(--hover-text-color);
+    transition: color .2s;
+}
+
+.sub-nav-link:hover{
+    color: var(--hover-text-color);
+}
+
+.sub-nav-link i{
+    font-size: 1rem;
+    margin-right: .5rem;
+    transition: color .2s;
+}
+
+.sub-nav-link:hover i{
+    color: var(--active-icon-color);
+}
+
+.bottom-list{
+    width: 100%;
+    height: 5rem;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    padding: .5rem 0;
+    display: flex;
+    justify-content: space-around;
+    transform: translateX(-1rem);
+}
+
+.bottom-list-link{
+    position: relative;
+}
+
+.bottom-list-link i{
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+}
+
+.bottom-list-link:hover i{
+    color: var(--active-icon-color);
+}
+
+.bottom-list-link span{
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #fff;
+    position: absolute;
+    top: -90%;
+    right: -50%;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section{
+    width: 100vw;
+    position: relative;
+    left: 0vw;
+}
+
+.header{
+    width: inherit;
+    height: 100vh;
+}
+
+.heading{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    font-size: 7rem;
+    color: rgb(25, 25, 44);
+}
+
+
+
+/* Toggle Button (For Mode) */
+.container input{
+    display: none;
+}
+
+.toggle{
+    width: 7rem;
+    height: 3rem;
+    background-color: #000;
+    border-radius: 2rem;
+    position: relative;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: .5rem;
+    position: absolute;
+    top: 3.5rem;
+    right: 7rem;
+    transition: background-color .5s;
+}
+
+.toggle h1{
+    position: absolute;
+    top: -50%;
+    left: 5%;
+}
+
+.circle{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: .15rem;
+    left: .15rem;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#check:checked ~ .toggle .circle{
+    left: calc(100% - 30px);
+    background-color: #000;
+}
+
+#check:checked ~ .toggle{
+    background-color: #fff;
+}
+
+.change-2.container{
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+
+/* For Calender */
+.calender-1 a{
+    position: absolute;
+    top: 2rem;
+    right: 16.5rem;
+    font-size: 5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+/* For Hamburger Menu */
+.header{
+    height: 100vh;
+    width: 100%;
+}
+
+.hamburger-menu-3{
+    width: 5.3rem;
+    height: 5.3rem;
+    background-color: transparent;
+    border: none;
+    border-radius: 10%;
+    box-shadow: none;
+    cursor: pointer;
+    position: fixed;
+    top: 2.5rem;
+    left: 2.5rem;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.linee{
+    height: .5rem;
+    width: 4rem;
+    background-color: #fff;
+    margin: .5rem .5rem;
+    transform-origin: right;
+    position: fixed;
+    top: 3rem;
+    left: 8rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.line-11{
+    position: absolute;
+    top: 1.1rem;
+    left: 7.9rem;
+    transition: all .5s;
+}
+
+.line-12{
+    top: 4.9rem;
+    left: 10.4rem;
+}
+
+.line-13{
+    position: absolute;
+    top: 3.6rem;
+    left: 7.9rem;
+    transition: all .5s;
+}
+
+.change-3 .line-11{
+    transform: rotate(-45deg) translateY(-.5rem) translateX(.5rem);
+}
+.change-3 .line-12{
+    opacity: 0;
+}
+.change-3 .line-13{
+    transform: rotate(45deg) translateY(-.3rem) translateX(-.3rem);
+}
+
+.bg-cover{
+    z-index: 5;
+    height: 6rem;
+    width: 6rem;
+    background-color: rgb(29, 31, 48);
+    position: fixed;
+    top: 5rem;
+    left: 5rem;
+    transition: transform .5s;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5rem;
+    left: 10rem;
+}
+
+.change-3 .bg-cover{
+    transform: scale(55);
+}
+
+.nav-list-3{
+    list-style: none;
+    position: fixed;
+    z-index: 7;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.change-3 .nav-list-3{
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-link-3{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-item-3:hover{
+    transform: scale(1.3);
+}
+
+.nav-item-3{
+    margin: 1.5rem 1rem;
+    font-size: 5rem;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+
+
+/* For CSS Navigation Menu */
+.follow, .menue-link-4{
+    font-size: 2rem;
+    color: #000;
+    font-weight: 800;
+    letter-spacing: .3rem;
+    justify-content: space-evenly;
+    text-decoration: none;
+    letter-spacing: .1rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    z-index: 1;
+}
+
+.menue-link-4{
+    position: relative;
+    top: 5rem;
+    opacity: 0;
+}
+
+.menue-4{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: none;    /* It helps when we hover on the menue links. It does not appear */
+    position: absolute;
+    top: 9rem;
+    left: 40rem;
+}
+
+.menue-4:hover {
+    pointer-events: auto;
+}
+
+.follow{
+    pointer-events: auto;
+}
+
+.line-4{
+    width: 0;
+    height: .1rem;
+    background-color: #fff;
+    transition: width 0.5s ease-in-out;
+}
+.menue-4:hover .menue-link-4{
+    top: 0;
+    opacity: 1;
+}
+
+.menue-link-4:nth-child(1){
+    transition: top .5s .1s, opacity .5s .1s;
+}
+.menue-link-4:nth-child(2){
+    transition: top .5s .2s, opacity .5s .1s;
+}
+.menue-link-4:nth-child(3){
+    transition: top .5s .3s, opacity .5s .1s;
+}
+.menue-link-4:nth-child(4){
+    transition: top .5s .4s, opacity .5s .1s;
+}
+.menue-link-4:nth-child(5){
+    transition: top .5s .5s, opacity .5s .1s;
+}
+
+.menue-link-4:nth-child(1):hover {
+    background-color: #1877F2;
+    border-radius: 20%;
+}
+.menue-link-4:nth-child(2):hover {
+    background-color: rgb(175, 20, 51);
+    border-radius: 20%;
+}
+.menue-link-4:nth-child(3):hover {
+    background-color: rgb(29 161 242);
+    border-radius: 20%;
+}
+.menue-link-4:nth-child(4):hover {
+    background-color: #0762C8;
+    border-radius: 20%;
+}
+.menue-link-4:nth-child(5):hover {
+    background-color: #ff0000;
+    border-radius: 20%;
+}
+
+
+
+
+
+/* Search Bar */
+.search-input-wrapper{
+    width: 100%;
+    height: 5rem;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+    position: absolute;
+    top: .5rem;
+}
+
+.search-input-wrapper.change-4{
+    opacity: 1;
+    visibility: visible;
+    transition: all .5s 1s;
+}
+
+.search-input{
+    width: 30rem;
+    display: flex;
+    align-items: center;
+}
+
+.search-input input{
+    width: 27rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: .1rem solid #999;
+    font-size: 1.5rem;
+    letter-spacing: .15rem;
+    outline: none;
+    color: #000;
+    margin-right: 1rem;
+}
+
+.search-input i{
+    font-size: 2rem;
+    color: #999;
+}
+
+.search-icon{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 4rem;
+    right: 3rem;
+    font-size: 2.5rem;
+    color: #000;
+    animation: searchIconAnim2 .5s forwards;
+}
+    
+.search-icon.change-4{
+    animation: searchIconAnim 1s forwards;
+}
+
+.search-icon i{
+    color: #000;
+    cursor: pointer;
+}
+
+@keyframes searchIconAnim {
+    0%{
+        top: 1.5rem;
+    }
+    40%{
+        top: 40%;
+        font-size: 25rem;
+    }
+    60%{
+        top: 40%;
+        right: calc(50% + 16rem);
+    }
+
+    100%{
+        top: 1.5rem;
+        right: calc(50% + 17rem);
+    }
+}
+
+@keyframes searchIconAnim2 {
+    0%{
+        right: calc(50% + 16rem);
+    }
+}
+
+
+
+
+
+/* For Animation on Home Page */
+.body-text{
+    margin: 0 15rem 0 15rem;
+    /* width: 50rem */
+    position: absolute;
+    top: 20rem;
+    /* left: 20rem; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.body-text h1{
+    font-size: 6rem;
+    animation: moveToDown 1s;
+}
+
+.txt{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    animation: moveToUp 1s;
+}
+
+/* Animation */
+@keyframes moveToUp{
+    0%{
+        transform: translateY(10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveToDown{
+    0%{
+        transform: translateY(-10rem);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
